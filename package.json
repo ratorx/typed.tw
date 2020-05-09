@@ -1,6 +1,8 @@
 {
-  "name": "typed-tailwind-go-generate",
-  "version": "0.2.0",
+  "name": "tailwind-css-go-generate",
+  "version": "0.1.0",
+  "description": "A tool to generate Golang constants from a tailwind.config.js",
+  "main": "out/gen.js",
   "dependencies": {
     "camelcase": "5.3.1",
     "postcss": "7.0.21",
@@ -10,14 +12,21 @@
   "devDependencies": {
     "@types/node": "^13.11.1"
   },
-  "files": [
-    "out/**/*"
-  ],
-  "main": "out/gen.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ratorx/typed.tw.git"
+  },
+  "author": "Reeto Chatterjee",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-		"postinstall": "npm run build",
-		"start": "npm run build && node out/gen.js tailwind.config.js"
-  }
+    "postinstall": "npm run build",
+    "start": "npm run build && node out/gen.js tailwind.config.js"
+  },
+  "bin": {
+    "twgen": "out/gen.js"
+  },
+  "files": [
+    "out/**/*"
+  ]
 }
