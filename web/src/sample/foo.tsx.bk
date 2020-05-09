@@ -1,6 +1,0 @@
-import React from "react";
-import { Tw } from "./tw";
-
-export const Foo = () => (
-  <p className={Tw().textGrey().hoverTextBlue().$()} />
-);
