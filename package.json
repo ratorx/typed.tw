@@ -1,6 +1,6 @@
 {
   "name": "tailwind-css-go-generate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A tool to generate Golang constants from a tailwind.config.js",
   "main": "out/gen.js",
   "dependencies": {
@@ -20,7 +20,6 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "postinstall": "npm run build",
     "start": "npm run build && node out/gen.js tailwind.config.js"
   },
   "bin": {
